@@ -72,16 +72,32 @@ customer_id  repeat_probability  will_repeat         recommended_action
        N003              0.9307            1    Loyalty reward / upsell
 ```
 
+## Dashboard
+
+```bash
+streamlit run app.py
+```
+
+Opens an interactive dashboard at http://localhost:8501 with three tabs:
+
+- **Score a customer** – enter a customer's details and get their repeat-purchase probability, the recommended campaign, and a chart of which factors pushed the prediction up or down.
+- **Score a CSV** – upload a customer file (or use the bundled sample), see the probability distribution and download the scored results.
+- **Model performance** – final metrics, the comparison of all seven models and the evaluation charts.
+
+A sidebar slider sets the decision threshold, so you can trade extra offers for catching more returning customers. If no trained model exists yet, the app trains one on first launch (about 30 seconds).
+
 ## Project structure
 
 ```
+├── app.py             # Streamlit dashboard
 ├── repeat_purchase/
 │   ├── config.py      # seed, feature lists, paths
 │   ├── data.py        # data generator, cleaning, feature engineering
 │   ├── models.py      # pre-processing pipeline and candidate models
 │   ├── plots.py       # EDA and evaluation figures
 │   ├── train.py       # end-to-end training pipeline (CLI)
-│   └── predict.py     # batch scoring (CLI)
+│   ├── predict.py     # batch scoring (CLI)
+│   └── explain.py     # per-customer feature contributions
 ├── data/sample_customers.csv
 ├── reports/
 │   ├── figures/       # generated charts
@@ -92,14 +108,14 @@ customer_id  repeat_probability  will_repeat         recommended_action
 
 ## Tech stack
 
-Python · NumPy · Pandas · scikit-learn · Matplotlib · Seaborn · joblib · pytest
+Python · NumPy · Pandas · scikit-learn · Matplotlib · Seaborn · Streamlit · Altair · joblib · pytest
 
 ## Future work
 
 - Retrain on real (anonymised) point-of-sale data and monitor drift
 - Add basket-level and seasonal features
-- Per-customer explanations with SHAP
-- Serve the model through a Streamlit dashboard or FastAPI endpoint
+- SHAP explanations for non-linear models
+- Serve the model through a FastAPI endpoint and deploy the dashboard
 
 ## License
 
