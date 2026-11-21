@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Generated artefacts (re-created by `python -m repeat_purchase.train`)
+data/customers_raw.csv
+models/*.joblib
+*.scored.csv
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
