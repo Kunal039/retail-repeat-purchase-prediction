@@ -1,0 +1,6 @@
+customer_id,age,gender,city_tier,channel,membership,visits_per_month,avg_basket_value,days_since_last_purchase,discount_usage_pct,satisfaction_rating,complaints_last_6m
+N001,29,Female,Tier-1,Both,Silver,4.5,1800,12,35.0,4,0
+N002,47,Male,Tier-2,In-store,None,0.8,950,140,10.0,2,2
+N003,35,Female,Tier-1,Online,Gold,3.2,2600,25,22.5,5,0
+N004,22,Male,Tier-3,Online,None,1.5,700,65,48.0,3,1
+N005,58,Female,Tier-2,In-store,Silver,2.0,1400,95,15.0,3,0
