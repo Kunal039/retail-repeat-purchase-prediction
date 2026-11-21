@@ -97,3 +97,7 @@ Python · NumPy · Pandas · scikit-learn · Matplotlib · Seaborn · joblib · 
 - Add basket-level and seasonal features
 - Per-customer explanations with SHAP
 - Serve the model through a Streamlit dashboard or FastAPI endpoint
+
+## License
+
+Released under the [MIT License](LICENSE).
