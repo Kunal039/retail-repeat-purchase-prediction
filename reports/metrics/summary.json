@@ -1,0 +1,123 @@
+{
+  "cleaning": {
+    "raw_rows": 5060,
+    "missing_before": 452,
+    "duplicates_removed": 60,
+    "outliers_capped": 48,
+    "clean_rows": 5000
+  },
+  "n_train": 4000,
+  "n_test": 1000,
+  "positive_rate": 0.3226,
+  "results": [
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.75,
+      "Precision": 0.6502057613168725,
+      "Recall": 0.4891640866873065,
+      "F1-Score": 0.558303886925795,
+      "ROC-AUC": 0.8038331557453892,
+      "CV ROC-AUC": 0.8160058926170658,
+      "Time (s)": 0.17092514038085938
+    },
+    {
+      "Model": "Neural Network (MLP)",
+      "Accuracy": 0.737,
+      "Precision": 0.6376146788990825,
+      "Recall": 0.43034055727554177,
+      "F1-Score": 0.5138632162661737,
+      "ROC-AUC": 0.7929583712517891,
+      "CV ROC-AUC": 0.7988558025115134,
+      "Time (s)": 0.8953661918640137
+    },
+    {
+      "Model": "Gradient Boosting",
+      "Accuracy": 0.743,
+      "Precision": 0.6330645161290323,
+      "Recall": 0.48606811145510836,
+      "F1-Score": 0.5499124343257443,
+      "ROC-AUC": 0.7892678956057272,
+      "CV ROC-AUC": 0.8034068480219686,
+      "Time (s)": 2.77445650100708
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.738,
+      "Precision": 0.6224899598393574,
+      "Recall": 0.47987616099071206,
+      "F1-Score": 0.541958041958042,
+      "ROC-AUC": 0.7790996519886039,
+      "CV ROC-AUC": 0.7913076747046539,
+      "Time (s)": 3.279308557510376
+    },
+    {
+      "Model": "Support Vector Machine",
+      "Accuracy": 0.752,
+      "Precision": 0.6637554585152838,
+      "Recall": 0.47058823529411764,
+      "F1-Score": 0.5507246376811594,
+      "ROC-AUC": 0.777567670152878,
+      "CV ROC-AUC": 0.7842572728052862,
+      "Time (s)": 5.774582147598267
+    },
+    {
+      "Model": "K-Nearest Neighbours",
+      "Accuracy": 0.743,
+      "Precision": 0.665,
+      "Recall": 0.4117647058823529,
+      "F1-Score": 0.5086042065009561,
+      "ROC-AUC": 0.7680007865697784,
+      "CV ROC-AUC": 0.768111215995881,
+      "Time (s)": 0.3454909324645996
+    },
+    {
+      "Model": "Decision Tree",
+      "Accuracy": 0.725,
+      "Precision": 0.5991735537190083,
+      "Recall": 0.44891640866873067,
+      "F1-Score": 0.5132743362831859,
+      "ROC-AUC": 0.7443328104778411,
+      "CV ROC-AUC": 0.7519301181383906,
+      "Time (s)": 0.20883417129516602
+    }
+  ],
+  "tuned_rf": {
+    "Accuracy": 0.738,
+    "Precision": 0.6276150627615062,
+    "Recall": 0.46439628482972134,
+    "F1-Score": 0.5338078291814946,
+    "ROC-AUC": 0.7877633522506414,
+    "best_params": {
+      "model__max_depth": 10,
+      "model__min_samples_leaf": 10,
+      "model__n_estimators": 400
+    },
+    "cv_best": 0.8011856746474442
+  },
+  "final": {
+    "model": "Logistic Regression",
+    "Accuracy": 0.745,
+    "Precision": 0.5821256038647343,
+    "Recall": 0.7461300309597523,
+    "F1-Score": 0.6540027137042063,
+    "ROC-AUC": 0.80434991379744,
+    "best_params": {
+      "model__C": 0.1,
+      "model__class_weight": "balanced"
+    }
+  },
+  "top_features": {
+    "engagement_score": 0.2467,
+    "days_since_last_purchase": 0.146,
+    "visits_per_month": 0.1222,
+    "monthly_spend": 0.0799,
+    "discount_usage_pct": 0.0582,
+    "satisfaction_rating": 0.0582,
+    "recency_bucket_Dormant": 0.0569,
+    "avg_basket_value": 0.045,
+    "recency_bucket_Recent": 0.0341,
+    "age": 0.0334
+  },
+  "classification_report": "              precision    recall  f1-score   support\n\n   No repeat       0.86      0.74      0.80       677\n      Repeat       0.58      0.75      0.65       323\n\n    accuracy                           0.74      1000\n   macro avg       0.72      0.75      0.73      1000\nweighted avg       0.77      0.74      0.75      1000\n",
+  "runtime_s": 24.999826669692993
+}
