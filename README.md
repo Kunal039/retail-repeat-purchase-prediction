@@ -1,5 +1,8 @@
 # Retail Customer Repeat-Purchase Prediction
 
+[![Tests](https://github.com/Kunal039/retail-repeat-purchase-prediction/actions/workflows/tests.yml/badge.svg)](https://github.com/Kunal039/retail-repeat-purchase-prediction/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Predicts whether a retail customer will buy again within the next **30 days**, so a store can send loyalty rewards to likely returners and win-back offers to customers who are drifting away.
 
 Built during a six-week Python, AI & ML internship at Scoobies (Optimal Digitech Pvt. Ltd.), June–July 2026.
